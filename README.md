@@ -12,7 +12,7 @@ You will be able to:
 * Compare and contrast traditional back propagation with back propagation through time
 * Demonstrate an understanding of the role time steps play in RNN models
 
-### Data as Time Sequences
+## Data as Time Sequences
 
 The hallmark of Recurrent Neural Networks is that they are used to evaluate **_Sequences_** of data, rather than just individual data points. So what is sequence data, and how do we distinguish it from other kinds of data, so that we know when to reach for an RNN? 
 
@@ -24,7 +24,7 @@ Another great example of sequence data is text. All text data is sequence data b
 
 Let's take a look at the overall structure of a RNN to see how it interacts with this sequence data!
 
-### Basic RNN Architecture
+## Basic RNN Architecture
 
 A basic Recurrent Neural Network is just a neural network that passes it's output from a given example back into itself as input for the next example. Intuitively, this approach makes sense--if we want to predict what Google's stock price is going to be 2 days from now, the most important input we can give it is what we think the price will be 1 day from now!
 
@@ -34,11 +34,11 @@ When drawn as a diagram, RNNs are usually represented in an **_Unrolled_** repre
 
 
 
-### Backpropagation Through Time
+## Backpropagation Through Time
 
 One interesting aspect of working with RNNs is that they use a modified form of back propagation called **_Back Propagation Through Time (BPTT)_**. Because the model is trained on sequence data, it has the potential to be right or wrong at every point in that sequence. This means that we need to adjust the model's weights at each time point to effectively learn from sequence data. Because the model starts at the most recent output, and then works backwards to calculate the loss and update the weights at each time step, the model is said to be going "back in time" to learn.  Since we have to update the every single weight at every single time step, that means that BPTT is much more computationally expensive than traditional back propagation. For instance, if a single data point is a sequence with 1000 time steps, then our model will perform a full round of back propagation for each of the 1000 points in that single sequence. 
 
-#### Truncated Back Prop Through Time
+### Truncated Back Prop Through Time
 
 This was a major hurdle for traditional RNN architectures, but a solution exists in the form of the **_Truncated Back Propagation Through Time (TBPTT)_** algorithm! We don't need to go to deep into specifics, but essentially, this algorithm increases performance by breaking a big sequence of 1000 into 50 sequences of 20. This significantly improves training time over regular BPTT, but is still significantly slower than vanilla back propagation. 
 
@@ -46,6 +46,6 @@ Fun Fact: Truncated Back Prop Through Time was invented in the dissertation of I
 
 
 
-# Summary
+## Summary
 
 In this lesson, we learned about the sequence data. We also learned about the architecture of RNNs, and the modified back prop algorithm they use for training!
