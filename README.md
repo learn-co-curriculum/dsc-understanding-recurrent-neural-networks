@@ -20,7 +20,7 @@ Time series data is a classix example of sequence data. We care about the value 
 
 Another great example of sequence data is text. All text data is sequence data by default--a letter only makes sense when it's words are in the proper order--we would lose all information if we made a "Bag of Letters". Words themselves are sequence data, and can be used for all kinds of novel sequence generation tasks. You've probably seen articles in popular culture about people using neural networks to generate novel band names, cookie names, pokemon names, etc. These are always done with Recurrent Neural Networks, because they are a perfect fit for sequence data. For this reason, RNNs excel at NLP tasks, because they can take in text as full sequences of words, from a single sentence up to an entire document or book! Because of this, they do not suffer the same loss of information that comes from a traditional Bag-of-Words vectorization approach. 
 
-<img src='unrolled.gif'>
+<img src='images/unrolled.gif'>
 
 Let's take a look at the overall structure of a RNN to see how it interacts with this sequence data!
 
@@ -30,7 +30,7 @@ A basic Recurrent Neural Network is just a neural network that passes it's outpu
 
 When drawn as a diagram, RNNs are usually represented in an **_Unrolled_** representation, which shows the components at each given time step. The image on the left is a how a RNN is denoted in a diagram "rolled up", while the image on the right is "unrolled". The current timestep is denoted with the input node $X_t$, which makes the previous time step $X_{t-1}$ and the next time step $X_{t+1}$.  $H_0$ represents the model's output for timestep 0, which will then be passed back into the model in $X_1$. 
 
-<img src='RNN-unrolled.png'>
+<img src='images/RNN-unrolled.png'>
 
 
 
