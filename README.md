@@ -30,7 +30,7 @@ A basic Recurrent Neural Network is just a neural network that passes it's outpu
 
 When drawn as a diagram, RNNs are usually represented in an **_Unrolled_** representation, which shows the components at each given time step. The image on the left is a how a RNN is denoted in a diagram "rolled up", while the image on the right is "unrolled". The current timestep is denoted with the input node $X_t$, which makes the previous time step $X_{t-1}$ and the next time step $X_{t+1}$.  $H_0$ represents the model's output for timestep 0, which will then be passed back into the model in $X_1$. 
 
-<img src='images/RNN-unrolled.png'>
+<img src='images/new-RNN-unrolled.png'>
 
 
 
@@ -49,3 +49,8 @@ Fun Fact: Truncated Back Prop Through Time was invented in the dissertation of I
 ## Summary
 
 In this lesson, you learned about the sequence data. You also learned about the architecture of RNNs, and the modified back prop algorithm they use for training!
+
+
+```python
+
+```
